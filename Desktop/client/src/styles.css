@@ -1,0 +1,40 @@
+h1,h2{
+  padding: 20px 50px 10px
+}
+
+p{
+  padding: 0 50px
+}
+.navbar-brand{
+  margin: 0
+}
+
+input, button, a{
+  display: block;
+  margin: 0 50px
+}
+
+
+:root {
+  --primary-color: #17a2b8;
+  --dark-color: #343a40;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
