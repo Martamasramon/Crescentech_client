@@ -65,13 +65,5 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Martamasramon/Crescentech_client.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Martamasramon/Crescentech_client/issues"
-  },
-  "homepage": "https://github.com/Martamasramon/Crescentech_client#readme"
+  "description": ""
 }
