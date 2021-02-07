@@ -10,7 +10,7 @@ import {
 export const getTests = () => async dispatch => {
   try {
     const res = await axios.get('https://evening-eyrie-40887.herokuapp.com/api/test');
-
+    //
     dispatch({
       type: GET_TESTS,
       payload: res.data
