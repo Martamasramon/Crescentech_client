@@ -9,7 +9,7 @@ import {
 // Get tests
 export const getTests = () => async dispatch => {
   try {
-    const res = await axios.get('/api/test');
+    const res = await axios.get('https://evening-eyrie-40887.herokuapp.com/api/test');
 
     dispatch({
       type: GET_TESTS,
@@ -27,7 +27,7 @@ export const getTests = () => async dispatch => {
 // Delete test
 export const deleteTest = id => async dispatch => {
   try {
-    await axios.delete(`/api/test/${id}`);
+    await axios.delete(`https://evening-eyrie-40887.herokuapp.com/api/test/${id}`);
     await window.location.reload(false);
 
     dispatch({
