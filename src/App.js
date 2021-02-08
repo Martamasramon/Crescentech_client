@@ -3,6 +3,7 @@ import { connect, Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
+// Import all views
 import Home from "./Views/Home";
 import ContactUs from "./Views/ContactUs";
 import Tests from "./Views/Tests";
