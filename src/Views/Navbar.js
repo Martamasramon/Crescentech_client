@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Avatar } from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import PropTypes from 'prop-types';
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+const Navbar = ({ auth: { isAuthenticated, loading }, logout, user: {name, avatar} }) => {
   // Add class to change login to logout
   const authLinks = (
     <ul className="nav navbar-nav navbar-right">
@@ -11,6 +11,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li id="contact"><a href="/contact">CONTACT US</a></li>
       <li id="tests"><a href="/tests">RESULT HISTORY</a></li>
       <li id="logout"><a onClick={logout} href="/">LOG OUT</a></li>
+      <li id="user"><Avatar alt={name} src={avatar} />{name}</li>
     </ul>
   );
 
@@ -36,11 +37,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  auth: state.auth
+  auth: state.auth,
+  user: state.user
 });
 
 export default connect(mapStateToProps, { logout })(Navbar);
