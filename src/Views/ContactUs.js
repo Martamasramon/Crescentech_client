@@ -5,11 +5,11 @@ const ContactUs = () => {
   const [message, setMessage] = useState({
     name: "",
     email: "",
-    title: "",
+    subject: "",
     body: ""
   });
 
-  const { name, email, title, body } = message;
+  const { name, email, subject, body } = message;
 
   const update = (e) => setMessage({
     ...message,[e.target.name]:e.target.value
@@ -31,7 +31,7 @@ const ContactUs = () => {
           <input
             onChange={update}
             name="name"
-            placeholder="Full name"
+            placeholder="Name"
             value={name}
             required
           />
@@ -44,9 +44,9 @@ const ContactUs = () => {
           />
           <input
             onChange={update}
-            name="title"
-            placeholder="Title"
-            value={title}
+            name="subject"
+            placeholder="Subject"
+            value={subject}
             required
           />
           <input
