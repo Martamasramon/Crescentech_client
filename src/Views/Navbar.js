@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import PropTypes from 'prop-types';
 
-const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
+const Navbar = ({ auth: { isAuthenticated, loading, user : {name, avatar} }, logout }) => {
   // Add class to change login to logout
   const authLinks = (
     <ul className="nav navbar-nav navbar-right">
@@ -11,7 +11,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
       <li id="contact"><a href="/contact">CONTACT US</a></li>
       <li id="tests"><a href="/tests">RESULT HISTORY</a></li>
       <li id="logout"><a onClick={logout} href="/">LOG OUT</a></li>
-      <li id="user"><Avatar alt={user.name} src={user.avatar} />{user.name}</li>
+      <li id="user">{name}</li>
     </ul>
   );
 
