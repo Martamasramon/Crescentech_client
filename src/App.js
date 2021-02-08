@@ -1,4 +1,6 @@
 import React, { Fragment, useEffect } from "react";
+import { connect, Provider } from 'react-redux';
+import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Home from "./Views/Home";
@@ -10,8 +12,6 @@ import ForgotPass from "./Views/ForgotPass";
 import Alert from "./Views/Alert";
 import Navbar from "./Views/Navbar";
 
-// Redux
-import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
@@ -21,7 +21,7 @@ if (localStorage.token){
   setAuthToken(localStorage.token);
 }
 
-const App = () => {
+const App = ({auth: {isAuthenticated}}) => {
   useEffect(()=>{
     store.dispatch(loadUser());
   }, []);
@@ -36,7 +36,7 @@ const App = () => {
             <Alert/>
             <Switch>
               <Route exact path="/contact" component={ContactUs} />
-              <Route exact path="/tests" component={Tests} />
+              <Route exact path="/tests" component={isAuthenticated ? Tests : Home} />
               <Route exact path="/login" component={LogIn} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/forgotpass" component={ForgotPass} />
@@ -49,4 +49,12 @@ const App = () => {
     );
 }
 
-export default App;
+Navbar.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, {})(App);
