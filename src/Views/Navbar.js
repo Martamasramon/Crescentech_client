@@ -11,7 +11,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
       <li id="contact"><a href="/contact">CONTACT US</a></li>
       <li id="tests"><a href="/tests">RESULT HISTORY</a></li>
       <li id="logout"><a onClick={logout} href="/">LOG OUT</a></li>
-      <li id="user"><Avatar alt={user.name} src={user.avatar} />{user.name}</li>
+      <li id="user">{user}</li>
     </ul>
   );
 
