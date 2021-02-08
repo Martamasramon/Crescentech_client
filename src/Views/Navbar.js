@@ -14,6 +14,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user : {name, avatar} }, log
       <li id="user">{name}</li>
     </ul>
   );
+  
 
   const guestLinks = (
     <ul className="nav navbar-nav navbar-right">
