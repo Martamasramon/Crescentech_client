@@ -14,6 +14,22 @@ input, button, a{
   margin: 0 50px
 }
 
+.footer{
+  bottom: 25px;
+  left: 0;
+  margin: 25px
+}
+
+.footer-a{
+  display:inline-block;
+  margin-right:10px;
+}
+
+
+img{
+  margin: 25px
+}
+
 
 :root {
   --primary-color: #17a2b8;

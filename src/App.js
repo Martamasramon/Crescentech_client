@@ -12,6 +12,7 @@ import SignUp from "./Views/SignUp";
 import ForgotPass from "./Views/ForgotPass";
 import Alert from "./Views/Alert";
 import Navbar from "./Views/Navbar";
+import Footer from "./Views/Footer";
 
 import store from './store';
 import { loadUser } from './actions/auth';
@@ -43,6 +44,7 @@ const App = ({auth: {isAuthenticated}}) => {
               <Route exact path="/forgotpass" component={ForgotPass} />
             </Switch>
           </section>
+          <Footer/>
         </Fragment>
       </Router>
     </Provider>

@@ -1,4 +1,4 @@
-import React, { Fragment, Avatar } from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import PropTypes from 'prop-types';
