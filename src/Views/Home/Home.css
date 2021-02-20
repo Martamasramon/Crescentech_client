@@ -1,0 +1,53 @@
+h1{
+  color: #976421;
+  font-size: 50px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+h2{
+  color: #C9852C;
+  font-size: 30px;
+  margin: 0;
+  padding: 20px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+img{
+  margin: 0;
+}
+
+.heading{
+  background-color: #F7EDDE;
+  padding: 50px;
+}
+.attributes{
+  background-color: #F7EDDE;
+  padding: 50px;
+}
+.steps{
+  background-color: #F7EDDE;
+  padding: 50px;
+}
+
+.card{
+  background-color: white;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  margin: 50px;
+  align-content: center;
+}
+
+.card-body{
+  padding: 25px;
+  text-align: center;
+}
+
+.atImg{
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}

@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TestItem from './TestItem';
 import { connect } from 'react-redux';
-import { getTests } from '../actions/test';
+import { getTests } from '../../actions/test';
 
 const Tests = ({ getTests, test:{tests, loading} }) => {
   useEffect(() => {
