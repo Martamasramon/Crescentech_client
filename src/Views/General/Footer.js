@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import { logout } from '../actions/auth';
+import { logout } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
 const Footer = ({ auth: { isAuthenticated, loading, user }, logout }) => {

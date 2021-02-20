@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
-import { login } from '../actions/auth';
+import { login } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
 const LogIn = ({ login, isAuthenticated }) => {

@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 // Import all views
-import Home from "./Views/Home";
+import Home from "./Views/Home/Home";
 import ContactUs from "./Views/ContactUs";
-import Tests from "./Views/Tests";
-import LogIn from "./Views/LogIn";
-import SignUp from "./Views/SignUp";
-import ForgotPass from "./Views/ForgotPass";
-import Alert from "./Views/Alert";
-import Navbar from "./Views/Navbar";
-import Footer from "./Views/Footer";
+import Tests from "./Views/Tests/Tests";
+import LogIn from "./Views/Login/LogIn";
+import SignUp from "./Views/Login/SignUp";
+import ForgotPass from "./Views/Login/ForgotPass";
+import Alert from "./Views/General/Alert";
+import Navbar from "./Views/General/Navbar";
+import Footer from "./Views/General/Footer";
 
 import store from './store';
 import { loadUser } from './actions/auth';
