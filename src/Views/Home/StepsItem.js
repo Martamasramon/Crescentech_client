@@ -1,16 +1,16 @@
 import React, {Component} from "react";
 import './home.css';
 
-class AttributeItem extends Component {
+class StepsItem extends Component {
 
   render (){
 
     const {image, title, text} = this.props;
 
     return(
-      <div class="card-body card-attr">
-        <img class="atImg" src={image} alt="imag"/>
+      <div class="card-body card-step">
         <h5 class="card-title">{title}</h5>
+        <img class="card-img" src={image} alt="imag"/>
         <p class="card-text">{text}</p>
       </div>
     );
@@ -18,4 +18,4 @@ class AttributeItem extends Component {
   }
 }
 
-export default AttributeItem;
+export default StepsItem;

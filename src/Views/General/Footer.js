@@ -2,34 +2,37 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import './general.css';
 
 const Footer = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   // Add class to change login to logout
   const authLinks = (
-    <div>
-      <a className="footer-a" href="/">Home</a>
-      <a className="footer-a" href="/contact">Contact Us</a>
-      <a className="footer-a" href="/tests">Result History</a>
-      <a className="footer-a" onClick={logout} href="/">Logout</a>
-    </div>
+    <ul className="nav navbar-nav navbar-right">
+      <li id="home"><a className="nav-item" href="/">Home</a></li>
+      <li id="contact"><a href="/contact">Contact Us</a></li>
+      <li id="tests"><a href="/tests">Result History</a></li>
+      {user && <li id="logout"><a onClick={logout} href="/">Log out</a></li>}
+    </ul>
   );
 
 
   const guestLinks = (
-    <div>
-      <a className="footer-a" href="/">Home</a>
-      <a className="footer-a" href="/contact">Contact Us</a>
-      <a className="footer-a" href="/login">Login</a>
-    </div>
+    <ul className="nav navbar-nav navbar-right">
+      <li id="home"><a href="/">Home</a></li>
+      <li id="contact"><a href="/contact">Contact Us</a></li>
+      <li id="login"><a href="/login">Log In</a></li>
+    </ul>
   );
 
   return (
-    <div className="footer">
-      <div>
-        <p>Crescentech</p>
+    <nav className="navbar navbar-default">
+      <div className="cont">
+        <div className="navbar-header">
+          <p className="navbar-brand footer">Crescentech</p>
+        </div>
+        {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
       </div>
-      {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
-    </div>
+    </nav>
   );
 };
 

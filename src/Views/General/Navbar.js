@@ -2,31 +2,35 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import './general.css';
 
 const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   // Add class to change login to logout
   const authLinks = (
     <ul className="nav navbar-nav navbar-right">
-      <li id="home"><a href="/">HOME</a></li>
-      <li id="contact"><a href="/contact">CONTACT US</a></li>
-      <li id="tests"><a href="/tests">RESULT HISTORY</a></li>
-      {user && <li id="user"><img src={user.avatar} alt={user.name} width="50" height="50"/>{user.name}</li>}
-      <li id="logout"><a onClick={logout} href="/">LOG OUT</a></li>
+      <li id="home"><a className="nav-item" href="/">Home</a></li>
+      <li id="contact"><a href="/contact">Contact Us</a></li>
+      <li id="tests"><a href="/tests">Result History</a></li>
+      {
+        user && <li id="logout"><a onClick={logout} href="/">
+        <img src={user.avatar} alt={user.name} width="50" height="50"/>
+        {user.name} - Log out</a></li>
+      }
     </ul>
   );
 
 
   const guestLinks = (
     <ul className="nav navbar-nav navbar-right">
-      <li id="home"><a href="/">HOME</a></li>
-      <li id="contact"><a href="/contact">CONTACT US</a></li>
-      <li id="login"><a href="/login">LOG IN</a></li>
+      <li id="home"><a href="/">Home</a></li>
+      <li id="contact"><a href="/contact">Contact Us</a></li>
+      <li id="login"><a href="/login">Log In</a></li>
     </ul>
   );
 
   return (
     <nav className="navbar navbar-default">
-      <div className="container">
+      <div className="cont">
         <div className="navbar-header">
           <p className="navbar-brand">Crescentech</p>
         </div>
