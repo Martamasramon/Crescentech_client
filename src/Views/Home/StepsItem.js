@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './home.css';
+import './Home.css';
 
 class StepsItem extends Component {
 

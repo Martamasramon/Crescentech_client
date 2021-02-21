@@ -1,5 +1,5 @@
 import React from "react";
-import './home.css';
+import './Home.css';
 import AttributeItem from './AttributeItem';
 
 const Attributes = () => {

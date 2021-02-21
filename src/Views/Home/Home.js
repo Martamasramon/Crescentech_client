@@ -1,5 +1,5 @@
 import React from "react";
-import './home.css';
+import './Home.css';
 import Attributes from "./Attributes";
 import Steps from "./Steps";
 
