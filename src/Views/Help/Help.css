@@ -1,4 +1,26 @@
+.card-body img{
+  margin: 8px;
+}
 
-img{
-  margin: 25px
+.cont-help {
+  margin: 0;
+}
+
+.row{
+  background-color: #FBF6EF;
+  padding: 25px;
+}
+
+#help h1{
+  color: #C9852C;
+  font-size: 50px;
+  margin: 0;
+  font-weight: 600;
+  align-self: center;
+  padding: 50px 50px 0px;
+}
+
+.card-right{
+  padding: 25px 15px 0 15px;
+  text-align: justify;
 }

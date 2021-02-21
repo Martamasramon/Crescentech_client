@@ -9,16 +9,17 @@ const Footer = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   const authLinks = (
     <ul className="nav navbar-nav navbar-right">
       <li id="home"><a className="nav-item" href="/">Home</a></li>
+      <li id="help"><a className="nav-item" href="/help">Help</a></li>
       <li id="contact"><a href="/contact">Contact Us</a></li>
       <li id="tests"><a href="/tests">Result History</a></li>
       {user && <li id="logout"><a onClick={logout} href="/">Log out</a></li>}
     </ul>
   );
 
-
   const guestLinks = (
     <ul className="nav navbar-nav navbar-right">
       <li id="home"><a href="/">Home</a></li>
+      <li id="help"><a className="nav-item" href="/help">Help</a></li>
       <li id="contact"><a href="/contact">Contact Us</a></li>
       <li id="login"><a href="/login">Log In</a></li>
     </ul>

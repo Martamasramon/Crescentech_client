@@ -7,7 +7,7 @@ const Help = () => {
     <div id="help">
 
       <div className="heading">
-          <h1>Fusarium Test</h1>
+          <h1>How to use our tests</h1>
       </div>
 
       <HowToUse/>

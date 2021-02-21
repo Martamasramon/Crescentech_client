@@ -2,7 +2,7 @@ h1{
   color: #976421;
   font-size: 50px;
   margin: 0;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 h2{
@@ -10,17 +10,17 @@ h2{
   font-size: 30px;
   margin: 0;
   padding: 20px 0px;
-  font-weight: 100;
-}
-
-h5{
-  font-size: 18px;
   font-weight: 300;
 }
 
+h5{
+  font-size: 30px;
+  font-weight: 400;
+}
+
 p {
-  font-size: 15px;
-  font-weight: 100;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .card-body img{
@@ -28,24 +28,28 @@ p {
 }
 
 .heading{
-  background-color: #F7EDDE;
+  background-color: #FBF6EF;
+}
+
+.heading-home{
   padding: 50px;
 }
+
 .attributes{
-  background-color: #F7EDDE;
+  background-color: #FBF6EF;
   padding: 50px;
   align-content: center;
 }
 .steps{
-  background-color: #F7EDDE;
+  background-color: #FBF6EF;
   padding: 25px;
 }
 
 .card .card-attr{
   background-color: white;
   border-radius: 10px;
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   margin: 50px;
   align-content: center;
 }

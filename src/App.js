@@ -13,6 +13,7 @@ import ForgotPass from "./Views/Login/ForgotPass";
 import Alert from "./Views/General/Alert";
 import Navbar from "./Views/General/Navbar";
 import Footer from "./Views/General/Footer";
+import Help from "./Views/Help/Help";
 
 import store from './store';
 import { loadUser } from './actions/auth';
@@ -41,6 +42,7 @@ const App = ({auth: {isAuthenticated}}) => {
               <Route exact path="/tests" component={isAuthenticated ? Tests : Home} />
               <Route exact path="/login" component={LogIn} />
               <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/help" component={Help} />
               <Route exact path="/forgotpass" component={ForgotPass} />
             </Switch>
           </section>

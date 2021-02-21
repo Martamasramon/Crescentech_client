@@ -1,77 +1,84 @@
 import React from "react";
-//import StepsText from "./HowToUse";
-//doesn't work upsie
+import ImageCard from './ImageCard';
+import TextCard from './TextCard';
 
 const HowToUse = () => {
 
-  const linkPhoto = "https://www.brightful.me/content/images/size/w1000/2020/07/david-kovalenko-G85VuTpw6jg-unsplash.jpg";
-
   return (
-    <div>
-      <h1>How to use</h1>
+    <div className="cont-help">
+      <div className="row">
+          <div className="col">
 
-      <div className="container">
-        <div className="row">
-            <div className="col">
+            <div className="row">
+                <div className="col-sm-12 col-md-6">
+                  <div class="card card-1">
+                    <ImageCard number="0"/>
+                  </div>
+                </div>
 
-              <div className="row">
-                  <div className="col-sm-12 col-md-6">
-                    <img src={linkPhoto} alt="Image1" width="400" height="400"/>
+                <div className="col-sm-12 col-md-6">
+                  <div class="card card-step">
+                    <TextCard number="0"/>
                   </div>
-                  <div className="col-sm-12 col-md-6">
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                    {//<StepsText numb="1"/>
-                    }
-                  </div>
+                </div>
+            </div>
+
+          </div>
+          <div className="col">
+            <div className="row">
+              <div className="col-sm-12 col-md-6">
+                <div class="card card-2">
+                  <ImageCard number="1"/>
+                </div>
               </div>
 
-            </div>
-            <div className="col">
-              <div className="row">
-                  <div className="col-sm-12 col-md-6">
-                    <img src={linkPhoto} alt="Image1" width="400" height="400"/>
-                  </div>
-                  <div className="col-sm-12 col-md-6">
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                  </div>
+              <div className="col-sm-12 col-md-6">
+                <div class="card card-step">
+                  <TextCard number="1"/>
+                </div>
               </div>
             </div>
-        </div>
-
-        <div className="row">
-            <div className="col">
-
-              <div className="row">
-                  <div className="col-sm-12 col-md-6">
-                    <img src={linkPhoto} alt="Image1" width="400" height="400"/>
-                  </div>
-                  <div className="col-sm-12 col-md-6">
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                  </div>
-              </div>
-
-            </div>
-            <div className="col">
-              <div className="row">
-                  <div className="col-sm-12 col-md-6">
-                    <img src={linkPhoto} alt="Image1" width="400" height="400"/>
-                  </div>
-                  <div className="col-sm-12 col-md-6">
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                    <p> jkdfhskjhjsfhg fgjh kdjfgh kgh kshdg kshgksdjhgs kdh skghksjgh kds fkjdhfsh sd sdhg skjdfh sjkdhf sdkjhf dskjhf skdjhf skfksdhf ksdhf ksdjhf skjdhf ksjdhf kjsdfksjfsdf ksdjh ksdhfjks df </p>
-                  </div>
-              </div>
-            </div>
-        </div>
-
+          </div>
       </div>
+
+      <div className="row">
+          <div className="col">
+
+            <div className="row">
+              <div className="col-sm-12 col-md-6">
+                <div class="card card-3">
+                  <ImageCard number="2"/>
+                </div>
+              </div>
+
+              <div className="col-sm-12 col-md-6">
+                <div class="card card-step">
+                  <TextCard number="2"/>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div className="col">
+            <div className="row">
+              <div className="col-sm-12 col-md-6">
+                <div class="card card-4">
+                  <ImageCard number="3"/>
+                </div>
+              </div>
+
+              <div className="col-sm-12 col-md-6">
+                <div class="card card-step">
+                  <TextCard number="3"/>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
     </div>
   );
 
 }
-//href="https://www.brightful.me/content/images/size/w1000/2020/07/david-kovalenko-G85VuTpw6jg-unsplash.jpg"
 
 export default HowToUse;

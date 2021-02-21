@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div id="home">
 
-      <div className="heading">
+      <div className="heading heading-home">
           <h1>Easiest way to detect Fusarium</h1>
           <h2>Find out your soil health in minutes</h2>
       </div>
