@@ -34,6 +34,7 @@ p {
 .attributes{
   background-color: #F7EDDE;
   padding: 50px;
+  align-content: center;
 }
 .steps{
   background-color: #F7EDDE;
