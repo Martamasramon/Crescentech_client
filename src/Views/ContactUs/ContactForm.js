@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import './contactUs.css';
 
-const ContactUs = () => {
+const ContactForm = () => {
 
   const [message, setMessage] = useState({
     name: "",
@@ -19,16 +20,12 @@ const ContactUs = () => {
 
   };
 
-
   return (
-      <div id="contact">
-
-        <div className="heading">
-            <h1>Contact Us</h1>
-        </div>
+      <div id="contact-form">
 
         <form onSubmit={onSubmit}>
           <input
+            class="contact-small"
             onChange={update}
             name="name"
             placeholder="Name"
@@ -36,6 +33,7 @@ const ContactUs = () => {
             required
           />
           <input
+            class="contact-small"
             onChange={update}
             name="email"
             placeholder="Email"
@@ -43,20 +41,24 @@ const ContactUs = () => {
             required
           />
           <input
+            class="contact-small"
             onChange={update}
             name="subject"
             placeholder="Subject"
             value={subject}
             required
           />
-          <input
+          <textArea
+            class="contact-large"
             onChange={update}
             name="body"
             placeholder="Write your message here"
             value={body}
             required
           />
-          <input type="submit" value="Send"/>
+          <input
+            class="btn contact-submit"
+            type="submit" value="Send"/>
         </form>
 
     </div>
@@ -64,4 +66,4 @@ const ContactUs = () => {
 
 }
 
-export default ContactUs;
+export default ContactForm;

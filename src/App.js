@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 // Import all views
 import Home from "./Views/Home/Home";
-import ContactUs from "./Views/ContactUs";
+import ContactUs from "./Views/ContactUs/ContactUs";
 import Tests from "./Views/Tests/Tests";
 import LogIn from "./Views/Login/LogIn";
 import SignUp from "./Views/Login/SignUp";
