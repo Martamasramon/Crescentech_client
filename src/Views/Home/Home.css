@@ -27,17 +27,17 @@ p,li {
   margin: 8px;
 }
 
-.heading{
+.heading, img{
   background-color: #FBF6EF;
 }
 
 .heading-home{
-  padding: 50px;
+  padding: 50px 50px 0 50px;
 }
 
 .attributes{
   background-color: #FBF6EF;
-  padding: 50px;
+  padding: 0 50px 50px 50px;
   align-content: center;
 }
 .steps{
@@ -48,8 +48,8 @@ p,li {
 .card .card-attr{
   background-color: white;
   border-radius: 10px;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   margin: 50px;
   align-content: center;
 }
@@ -60,9 +60,9 @@ p,li {
 }
 
 .atImg{
-  height: 100px;
-  width: 100px;
-  border-radius: 100px;
+  height: 80px;
+  width: 80px;
+  background-color: white;
 }
 
 .card .card-step{
@@ -74,7 +74,8 @@ p,li {
 }
 
 .card-img{
-  width: 90%;
+  height: 350px;
+  background-color: inherit;
 }
 
 .card-1{

@@ -29,6 +29,15 @@
   margin: 10px 40px;
 }
 
+.cont-foot{
+  margin: 10px 40px;
+  padding-top: 60px;
+}
+
 .footer p{
   font-size: 28px;
+}
+
+.footer-img{
+  width: 300px;
 }

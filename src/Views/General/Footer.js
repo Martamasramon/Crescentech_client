@@ -26,14 +26,20 @@ const Footer = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   );
 
   return (
-    <nav className="navbar navbar-default">
-      <div className="cont">
-        <div className="navbar-header">
-          <p className="navbar-brand footer">Crescentech</p>
+    <div className="row">
+        <div className="col-xs-12 col-sm-6 col-md-4">
+          <img class="footer-img" src={process.env.PUBLIC_URL + "/images/Home/crops_footer.png"} alt="imag"/>
         </div>
-        {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
-      </div>
-    </nav>
+
+        <div className="col-xs-12 col-sm-6 col-md-8">
+          <nav className="navbar navbar-default">
+            <div className="cont-foot">
+              {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
+            </div>
+          </nav>
+        </div>
+    </div>
+
   );
 };
 

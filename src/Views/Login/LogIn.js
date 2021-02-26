@@ -59,8 +59,6 @@ const LogIn = ({ login, isAuthenticated }) => {
           <p><a href="/forgotpass">Forgot password</a></p>
           <p>Don't have an account? <a href="/signup">Sign Up</a></p>
 
-          <hr className="login-hr"/>
-
         </div>
 
     );

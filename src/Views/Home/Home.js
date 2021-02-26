@@ -4,7 +4,6 @@ import Attributes from "./Attributes";
 import Steps from "./Steps";
 
 const Home = () => {
-  const linkPhoto = "https://create.adobe.com/2013/10/1/long_exposure_photography_of_toby_harriman/jcr:content/article-body/full_width_images/image1.img.jpg/1567809082430.jpg";
 
   return (
     <div id="home">
@@ -15,7 +14,7 @@ const Home = () => {
       </div>
 
       <div className="image">
-          <img src={linkPhoto} alt="Image1" width="100%"/>
+          <img src={process.env.PUBLIC_URL + "/images/Home/big_man_sampling.png"} alt="man_sampling" width="100%"/>
       </div>
 
       <div className="attributes">
