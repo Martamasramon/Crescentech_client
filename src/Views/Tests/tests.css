@@ -3,6 +3,23 @@
   background-color: #FBF6EF;
 }
 
-.test-item{
-  margin: 25px 0 25px 0;
+.card-test{
+  width: 100%;
+  border-radius: 10px;
+  background-color: #F7EDDE;
+  padding: 10px 35px 30px 35px;
+  margin: 50px 0 0 0;
+  display:inline-block;
+}
+
+.div-button-delete{
+  text-align: right;
+}
+
+.test-delete{
+  margin: 20px 0 0 0;
+  width: 100px;
+  background-color: #C9852C;
+  color: white;
+  font-weight: 600;
 }

@@ -10,12 +10,14 @@ const TestItem = ({
   deleteTest,
   test: { _id, title, result, user, comments, date, location },
 }) => (
-  <div className="test-item">
+  <div className="card card-test">
     <h2>{title}</h2>
     <p><b>{result}</b></p>
     <p>Tested on {date}, at {location}</p>
     <p><i>{comments}</i></p>
-    <button className="btn" onClick={() => deleteTest(_id)}>Delete</button>
+    <div className="div-button-delete">
+      <button className="btn test-delete" onClick={() => deleteTest(_id)}>Delete</button>
+    </div>
   </div>
 );
 
