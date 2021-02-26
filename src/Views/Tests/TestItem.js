@@ -2,19 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { deleteTest } from '../../actions/test';
+import './tests.css';
 
-// Make returned html pretty!
+
 const TestItem = ({
   auth,
   deleteTest,
   test: { _id, title, result, user, comments, date, location },
 }) => (
-  <div>
+  <div className="test-item">
     <h2>{title}</h2>
-    <p>{result}</p>
+    <p><b>{result}</b></p>
     <p>Tested on {date}, at {location}</p>
-    <p>{comments}</p>
-    <button onClick={() => deleteTest(_id)}>Delete</button>
+    <p><i>{comments}</i></p>
+    <button className="btn" onClick={() => deleteTest(_id)}>Delete</button>
   </div>
 );
 

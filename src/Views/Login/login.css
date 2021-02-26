@@ -1,0 +1,40 @@
+.login, .signup, .forgotpass{
+  padding: 50px;
+  background-color: #FBF6EF;
+  text-align: center;
+}
+
+.card-login, .card-signup, .card-forgotpass{
+  width: 400px;
+  border-radius: 10px;
+  background-color: #F7EDDE;
+  padding: 25px;
+  margin: 45px 0 45px 0;
+  display:inline-block;
+}
+
+.login-input, .signup-input, .forgotpass-input{
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 5px;
+}
+
+.login-submit, .signup-submit, .forgotpass-submit{
+  width: 100px;
+  background-color: #C9852C;
+  color: white;
+  font-weight: 600;
+}
+
+.login-hr {
+  height: 80px;
+}
+
+.forgotpass-hr {
+  height: 50px;
+}
+
+.forgotpass-h2{
+  width: 65%;
+  display: inline-block;
+}

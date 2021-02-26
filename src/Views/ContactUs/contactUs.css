@@ -66,9 +66,6 @@ form{
   text-align: center;
 }
 
-hr{
-  border: 0;
-  background-color: #FBF6EF;
+.contact-hr {
   height: 150px;
-  margin: 0;
 }

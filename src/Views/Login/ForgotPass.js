@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import nodemailer from 'nodemailer';
+import './login.css';
+
 
 // Email to reset password set-up
 let transport = nodemailer.createTransport({
@@ -47,22 +49,31 @@ function ForgotPass() {
     }
 
     return (
-        <div>
+        <div className="forgotpass">
           <h1>Don't worry!</h1>
-          <p>Just give us your email and we'll send you a link to reset your password!</p>
+          <h2 className="forgotpass-h2">Just give us your email and we'll send you a link to reset your password!</h2>
 
-          <form onSubmit={onSubmit}>
-              <input
-                onChange={update}
-                name="email"
-                placeholder="Email"
-                value={contact.email}
-              />
-              <input type="submit" value="Log in" />
-          </form>
+          <hr></hr>
 
+          <div className="card card-forgotpass">
+            <form onSubmit={onSubmit}>
+                <input className="forgotpass-input"
+                  onChange={update}
+                  name="email"
+                  placeholder="Email"
+                  value={contact.email}
+                />
+                <input className="btn forgotpass-submit" type="submit" value="Send link" />
+            </form>
+          </div>
+
+          <hr className="forgotpass-hr"/>
+          
           <p>Just remembered your password?<a href="/login">Log in</a></p>
           <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+
+          <hr className="forgotpass-hr"/>
+
         </div>
     );
 

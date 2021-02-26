@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import './login.css';
+
 
 const SignUp = ({setAlert, register, isAuthenticated }) => {
 
@@ -35,45 +37,48 @@ const SignUp = ({setAlert, register, isAuthenticated }) => {
   }
 
   return (
-      <div>
+      <div className="signup">
 
-        <h1>Fill in with your details to make an account</h1>
+        <h1>Sign up!</h1>
+        <h2>Fill in with your details to make an account</h2>
 
-        <form onSubmit={onSubmit}>
-          <input
-            onChange={update}
-            name="name"
-            placeholder="Full name"
-            value={name}
-            required
-          />
-          <input
-            onChange={update}
-            name="email"
-            placeholder="Email"
-            value={email}
-            required
-          />
-          <input
+        <div className="card card-signup">
+          <form onSubmit={onSubmit}>
+            <input className="signup-input"
+              onChange={update}
+              name="name"
+              placeholder="Full name"
+              value={name}
+              required
+            />
+            <input className="signup-input"
+              onChange={update}
+              name="email"
+              placeholder="Email"
+              value={email}
+              required
+            />
+            <input className="signup-input"
+              type="password"
+              onChange={update}
+              name="password"
+              placeholder="Password"
+              value={password}
+              minLength='6'
+              required
+            />
+            <input className="signup-input"
             type="password"
-            onChange={update}
-            name="password"
-            placeholder="Password"
-            value={password}
-            minLength='6'
-            required
-          />
-          <input
-          type="password"
-            onChange={update}
-            name="password2"
-            placeholder="Confirm password"
-            value={password2}
-            minLength='6'
-            required
-          />
-          <input type="submit" value="Sign up" />
-        </form>
+              onChange={update}
+              name="password2"
+              placeholder="Confirm password"
+              value={password2}
+              minLength='6'
+              required
+            />
+            <input className="btn signup-submit" type="submit" value="Sign up" />
+          </form>
+        </div>
 
         <p>Already have an account? <a href="/login">Log in</a></p>
       </div>

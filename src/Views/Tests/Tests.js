@@ -1,8 +1,10 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TestItem from './TestItem';
 import { connect } from 'react-redux';
 import { getTests } from '../../actions/test';
+import './tests.css';
+
 
 const Tests = ({ getTests, test:{tests, loading} }) => {
   useEffect(() => {
@@ -10,15 +12,12 @@ const Tests = ({ getTests, test:{tests, loading} }) => {
   }, [getTests]);
 
   // Change h1 to spinner
-  return loading ? (<h1>Loading</h1>) : (
-    <Fragment>
-      <h1>Test Result History</h1>
-
+  return (loading ? (<h1>Loading</h1>) : (
       <div className="tests">
-      {tests.map((test) => (  <TestItem key={test._id} test={test} /> ))}
+        <h1>Test Result History</h1>
+        {tests.map((test) => (  <TestItem key={test._id} test={test} /> ))}
       </div>
-    </Fragment>
-  );
+  ));
 };
 
 Tests.propTypes = {

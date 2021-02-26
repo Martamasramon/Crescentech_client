@@ -28,7 +28,7 @@ const ContactUs = () => {
         </div>
 
         <div className="space">
-          <hr/>
+          <hr className="contact-hr"/>
         </div>
 
     </div>

@@ -3,5 +3,11 @@
 }
 
 body{
-  font-family: 'Montserrat', sans-serif;s
+  font-family: 'Montserrat', sans-serif;
+}
+
+hr{
+  border: 0;
+  background-color: #FBF6EF;
+  margin: 0;
 }

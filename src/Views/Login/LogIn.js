@@ -3,6 +3,8 @@ import { Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
 import { login } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import './login.css';
+
 
 const LogIn = ({ login, isAuthenticated }) => {
     const [contact, setContact] = useState({
@@ -27,28 +29,38 @@ const LogIn = ({ login, isAuthenticated }) => {
     }
 
     return (
-        <div>
-          <h1>Let's get you signed in!</h1>
+        <div className="login">
 
-          <form onSubmit={onSubmit}>
-            <input
-              onChange={update}
-              name="email"
-              placeholder="Email"
-              value={email}
-            />
-            <input
-              onChange={update}
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={password}
-            />
-            <input type="submit" value="Log in" />
-          </form>
+          <h1>Log in!</h1>
+          <h2>Fill in with your details to log in</h2>
+
+
+          <div className="card card-login">
+            <form onSubmit={onSubmit}>
+              <input
+                class="login-input"
+                onChange={update}
+                name="email"
+                placeholder="Email"
+                value={email}
+              />
+              <input
+                className="login-input"
+                onChange={update}
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={password}
+              />
+              <input className="login-submit btn" type="submit" value="Log in" />
+            </form>
+          </div>
 
           <p><a href="/forgotpass">Forgot password</a></p>
           <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+
+          <hr className="login-hr"/>
+
         </div>
 
     );
