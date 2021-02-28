@@ -31,14 +31,17 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   );
 
   return (
-    <nav className="navbar navbar-default">
-      <div className="cont">
-        <div className="navbar-header">
-          <p className="navbar-brand">Crescentech</p>
+    <div className="row">
+        <div className="col-xs-12 col-sm-5">
+          <img class="nav-img" src={process.env.PUBLIC_URL + "/images/Home/logo.png"} alt="imag"/>
         </div>
-        {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
-      </div>
-    </nav>
+
+        <div className="col-xs-12 col-sm-7">
+          <nav className="navbar navbar-default nav-top">
+            {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
+          </nav>
+        </div>
+    </div>
   );
 };
 

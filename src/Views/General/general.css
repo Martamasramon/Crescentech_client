@@ -25,6 +25,15 @@
   margin: 0 10px
 }
 
+.nav-img{
+  width: 250px;
+  padding: 15px 0 0 18px;
+}
+
+.nav-top{
+  padding-top: 25px;
+}
+
 .cont{
   margin: 10px 40px;
 }
