@@ -8,12 +8,12 @@ import './tests.css';
 const TestItem = ({
   auth,
   deleteTest,
-  test: { _id, title, result, user, comments, date, location },
+  test: { _id, title, result, user, comments, date, lat, lng },
 }) => (
   <div className="card card-test">
     <h2>{title}</h2>
     <p><b>{result}</b></p>
-    <p>Tested on {date}, at {location}</p>
+    <p>Tested on {date}, at {lat}:{lng} </p>
     <p><i>{comments}</i></p>
     <div className="div-button-delete">
       <button className="btn test-delete" onClick={() => deleteTest(_id)}>Delete</button>

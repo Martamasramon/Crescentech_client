@@ -50,6 +50,14 @@ const locs = [
 ];
 
 
+// TO-DO
+// Get location from phone as lat vs lng
+// Change schema - location not string but object of numbs
+// Use use test coordinates
+// Make positive - green and negative - red
+// Find center from average locations
+
+
 const Tests = ({ getTests, test:{tests, loading} }) => {
   useEffect(() => {
     getTests();

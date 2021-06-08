@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import PropTypes from 'prop-types';
 
 /* eslint-disable no-undef, no-unused-vars */
+const API_KEY = process.env.REACT_APP_MAP_API_KEY;
 
 const Map = ({ center, locs, zoomLevel }) => {
 
@@ -10,7 +11,7 @@ const Map = ({ center, locs, zoomLevel }) => {
   <div className="map">
     <div className="google-map" style={{ height: '400px', width: '100%' }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyA23Z1usS46CvOXr2icwjugrqyrXga_79g' }}
+        bootstrapURLKeys={{ key: API_KEY }}
         defaultCenter={center}
         defaultZoom={zoomLevel}
         onGoogleApiLoaded={({map}) =>{
