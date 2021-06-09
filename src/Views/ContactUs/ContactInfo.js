@@ -3,6 +3,7 @@ import './contactUs.css';
 
 const ContactForm = () => {
 
+  /* eslint-disable no-undef, react/no-unescaped-entities */
   return (
       <div id="contact-info">
         <h3>We would love to hear from you - whether it's a compliment, a query, or just to talk about your day!</h3>

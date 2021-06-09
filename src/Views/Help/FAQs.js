@@ -2,9 +2,9 @@ import React from "react";
 
 const FAQs = () => {
 
-  const numb = 5;
-  const question = [];
-  const answer = [];
+//  const numb = 5;
+//  const question = [];
+//  const answer = [];
 
 
   return (

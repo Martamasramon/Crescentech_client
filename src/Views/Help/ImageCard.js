@@ -3,6 +3,8 @@ import './Help.css';
 
 class ImageCard extends Component {
 
+  /* eslint-disable react/prop-types, no-undef */
+
   render (){
 
     const image = ["man_sampling.png", "man_shaking.png", "nfc_phone.png", "man_looking.png"];
@@ -14,10 +16,10 @@ class ImageCard extends Component {
     const numb = this.props.number;
 
     return(
-      <div class="card-body card-step">
-        <h5 class="card-title">{title[numb]}</h5>
-        <img class="card-img" src={process.env.PUBLIC_URL + "/images/Home/" + image[numb]} alt="imag"/>
-        <p class="card-text">{text[numb]}</p>
+      <div className="card-body card-step">
+        <h5 className="card-title">{title[numb]}</h5>
+        <img className="card-img" src={process.env.PUBLIC_URL + "/images/Home/" + image[numb]} alt="imag"/>
+        <p className="card-text">{text[numb]}</p>
       </div>
     );
 

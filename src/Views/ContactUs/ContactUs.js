@@ -13,14 +13,14 @@ const ContactUs = () => {
         </div>
 
 
-        <div class="row">
+        <div className="row">
 
-          <div class="col-xs-12 col-sm-8">
+          <div className="col-xs-12 col-sm-8">
             <ContactInfo/>
           </div>
 
-          <div class="col-xs-12 col-sm-4">
-            <div class="card card-contact">
+          <div className="col-xs-12 col-sm-4">
+            <div className="card card-contact">
               <ContactForm/>
             </div>
           </div>

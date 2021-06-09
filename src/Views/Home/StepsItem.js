@@ -5,13 +5,14 @@ class StepsItem extends Component {
 
   render (){
 
+    /* eslint-disable react/prop-types */
     const {image, title, text} = this.props;
 
     return(
-      <div class="card-body card-step">
-        <h5 class="card-title">{title}</h5>
-        <img class="card-img" src={image} alt="imag"/>
-        <p class="card-text">{text}</p>
+      <div className="card-body card-step">
+        <h5 className="card-title">{title}</h5>
+        <img className="card-img" src={image} alt="imag"/>
+        <p className="card-text">{text}</p>
       </div>
     );
 

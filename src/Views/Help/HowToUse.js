@@ -11,13 +11,13 @@ const HowToUse = () => {
 
             <div className="row">
                 <div className="col-sm-12 col-md-6">
-                  <div class="card card-1">
+                  <div className="card card-1">
                     <ImageCard number="0"/>
                   </div>
                 </div>
 
                 <div className="col-sm-12 col-md-6">
-                  <div class="card card-step">
+                  <div className="card card-step">
                     <TextCard number="0"/>
                   </div>
                 </div>
@@ -27,13 +27,13 @@ const HowToUse = () => {
           <div className="col">
             <div className="row">
               <div className="col-sm-12 col-md-6">
-                <div class="card card-2">
+                <div className="card card-2">
                   <ImageCard number="1"/>
                 </div>
               </div>
 
               <div className="col-sm-12 col-md-6">
-                <div class="card card-step">
+                <div className="card card-step">
                   <TextCard number="1"/>
                 </div>
               </div>
@@ -46,13 +46,13 @@ const HowToUse = () => {
 
             <div className="row">
               <div className="col-sm-12 col-md-6">
-                <div class="card card-3">
+                <div className="card card-3">
                   <ImageCard number="2"/>
                 </div>
               </div>
 
               <div className="col-sm-12 col-md-6">
-                <div class="card card-step">
+                <div className="card card-step">
                   <TextCard number="2"/>
                 </div>
               </div>
@@ -62,13 +62,13 @@ const HowToUse = () => {
           <div className="col">
             <div className="row">
               <div className="col-sm-12 col-md-6">
-                <div class="card card-4">
+                <div className="card card-4">
                   <ImageCard number="3"/>
                 </div>
               </div>
 
               <div className="col-sm-12 col-md-6">
-                <div class="card card-step">
+                <div className="card card-step">
                   <TextCard number="3"/>
                 </div>
               </div>

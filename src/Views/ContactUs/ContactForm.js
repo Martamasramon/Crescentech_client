@@ -16,8 +16,9 @@ const ContactForm = () => {
     ...message,[e.target.name]:e.target.value
   });
 
+  /* eslint-disable no-unused-vars */
   const onSubmit = async (e) => {
-
+      console.log("Submitted" + e);
   };
 
   return (
@@ -25,7 +26,7 @@ const ContactForm = () => {
 
         <form onSubmit={onSubmit}>
           <input
-            class="contact-small"
+            className="contact-small"
             onChange={update}
             name="name"
             placeholder="Name"
@@ -33,7 +34,7 @@ const ContactForm = () => {
             required
           />
           <input
-            class="contact-small"
+            className="contact-small"
             onChange={update}
             name="email"
             placeholder="Email"
@@ -41,7 +42,7 @@ const ContactForm = () => {
             required
           />
           <input
-            class="contact-small"
+            className="contact-small"
             onChange={update}
             name="subject"
             placeholder="Subject"
@@ -49,7 +50,7 @@ const ContactForm = () => {
             required
           />
           <textArea
-            class="contact-large"
+            className="contact-large"
             onChange={update}
             name="body"
             placeholder="Write your message here"
@@ -57,7 +58,7 @@ const ContactForm = () => {
             required
           />
           <input
-            class="btn contact-submit"
+            className="btn contact-submit"
             type="submit" value="Send"/>
         </form>
 

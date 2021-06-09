@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { deleteTest } from '../../actions/test';
 import './tests.css';
 
+/* eslint-disable react/prop-types, @typescript-eslint/no-unused-vars */
 
 const TestItem = ({
   auth,
