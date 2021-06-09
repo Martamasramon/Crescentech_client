@@ -4,6 +4,9 @@ import { logout } from '../../actions/auth';
 import PropTypes from 'prop-types';
 import './general.css';
 
+/* eslint-disable no-undef, no-unused-vars, react/prop-types, react/no-unknown-property */
+
+
 const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
   // Add class to change login to logout
   const authLinks = (

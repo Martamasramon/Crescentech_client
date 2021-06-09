@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import PropTypes from 'prop-types';
 
 /* eslint-disable no-undef, no-unused-vars */
+
 const API_KEY = process.env.REACT_APP_MAP_API_KEY;
 
 const Map = ({ center, locs, zoomLevel }) => {

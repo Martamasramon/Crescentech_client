@@ -19,6 +19,7 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
+/* eslint-disable no-undef, no-unused-vars, react/prop-types */
 
 if (localStorage.token){
   setAuthToken(localStorage.token);
