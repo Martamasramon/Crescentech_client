@@ -28,6 +28,7 @@ const LogIn = ({ login, isAuthenticated }) => {
       return <Redirect to = "/" />;
     }
 
+    /* eslint-disable react/no-unescaped-entities */
     return (
         <div className="login">
 
@@ -38,7 +39,7 @@ const LogIn = ({ login, isAuthenticated }) => {
           <div className="card card-login">
             <form onSubmit={onSubmit}>
               <input
-                class="login-input"
+                className="login-input"
                 onChange={update}
                 name="email"
                 placeholder="Email"

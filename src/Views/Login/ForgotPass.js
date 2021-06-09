@@ -25,6 +25,8 @@ const message = {
 };
 
 
+/* eslint-disable react/prop-types, react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 // Main function
 function ForgotPass() {
     const [contact, setContact] = useState({
@@ -68,7 +70,7 @@ function ForgotPass() {
           </div>
 
           <hr className="forgotpass-hr"/>
-          
+
           <p>Just remembered your password?<a href="/login">Log in</a></p>
           <p>Don't have an account? <a href="/signup">Sign Up</a></p>
 

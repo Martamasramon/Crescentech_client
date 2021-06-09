@@ -5,6 +5,7 @@ import Steps from "./Steps";
 
 const Home = () => {
 
+  /* eslint-disable no-undef */
   return (
     <div id="home">
 
