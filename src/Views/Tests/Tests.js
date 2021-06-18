@@ -6,68 +6,47 @@ import { connect } from 'react-redux';
 import { getTests } from '../../actions/test';
 import './tests.css';
 
-
-const center ={
-  lat: 37.42226,
-  lng: -122.08427,
-}
-const locs = [
-  {
-    colour: "green",
-    coordinates: {
-       lat: 37.42226,
-       lng: -122.08427,
-     }
-  },
-  {
-    colour: "red",
-    coordinates: {
-      lat: 37.42226,
-      lng: -122.08437,
-    }
-  },
-  {
-    colour: "green",
-    coordinates: {
-        lat: 37.42206,
-        lng: -122.08415,
-      }
-  },
-  {
-    colour: "red",
-    coordinates: {
-      lat: 37.42212,
-      lng: -122.08439,
-    }
-  },
-  {
-    colour: "green",
-    coordinates: {
-      lat: 37.4224,
-      lng: -122.084,
-    }
-  }
-];
-
-
 // TO-DO
 // Get location from phone as lat vs lng
-// Change schema - location not string but object of numbs
-// Use use test coordinates
-// Make positive - green and negative - red
-// Find center from average locations
-
 
 const Tests = ({ getTests, test:{tests, loading} }) => {
   useEffect(() => {
     getTests();
   }, [getTests]);
 
+  const testLocations = [];
+  let lat = 0;
+  let lng = 0;
+  let count = 0;
+
+  tests.forEach((test) => {
+    let testColour = "White";
+    if (test.result === "Positive") testColour = "Green";
+    else if (test.result === "Negative") testColour = "Red";
+
+    testLocations.push({
+      colour: testColour,
+      coordinates: {
+        lat: test.lat,
+        lng: test.lng
+      }
+    });
+
+    lat = lat + test.lat;
+    lng = lng + test.lng;
+    count = count + 1;
+  });
+
+  const center = {
+    lat: lat/count,
+    lng: lng/count,
+  }
+
   // Change h1 to spinner
   return (loading ? (<h1>Loading</h1>) : (
       <div className="tests">
-        <h1>Test Result History</h1>
-        <MyMap center={center} locs={locs} zoomLevel={18} />
+        <h1 className="tests-title">Test Result History</h1>
+        <MyMap center={center} locs={testLocations} zoomLevel={18} />
         {tests.map((test) => (  <TestItem key={test._id} test={test} /> ))}
       </div>
   ));
